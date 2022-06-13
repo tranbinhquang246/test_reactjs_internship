@@ -4,10 +4,13 @@ import LogoItem from '../assets/logoitem.jpg'
 import { BsHeartFill } from "react-icons/bs";
 import { GrFormView } from "react-icons/gr";
 import DataJson from '../assets/data.json'
+import Modal from './Modal';
+
 
 
 function Tab_motion_trend_pick() {
   const elements2 = [1,2,3,4,5]
+  const [isOpen, setIsOpen] = useState(false);
   console.log(DataJson)
   
   return ( 
@@ -17,7 +20,7 @@ function Tab_motion_trend_pick() {
             DataJson.map((value, index) => {
               return (
                 <div className="h-44 w-full flex flex-col">
-                  <div className="flex items-end h-4/5 w-full" style ={{backgroundImage: 'url('+DataJson[index].medium_cover_image+')'}}>
+                  <div className="flex items-end h-4/5 w-full" style ={{backgroundImage: 'url('+DataJson[index].medium_cover_image+')'}} onClick={() => setIsOpen(true)}>
                     <label className="font-montserrat text-white font-bold ml-2 mb-2 ">{DataJson[index].title}</label>
                   </div>
                   <div className="flex mt-2 justify-between">
@@ -118,6 +121,7 @@ function Tab_motion_trend_pick() {
             })
           }
       </div>
+      {isOpen && <Modal setIsOpen={setIsOpen} />}
     </div>
   )
 }
