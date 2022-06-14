@@ -3,7 +3,7 @@
 #### Not fully responsive 
 ##### Data
 Cannot get data from API because CORS. The data is taken online from the website and copied to the data.json file. Movie list gets data from this data.json file.
-#### Time: 1day 2 nights (Although I received the email early, I did not start working early because I finished the final exam at the school) 
+#### Time: 1day 1 nights (Although I received the email early, I did not start working early because I finished the final exam at the school) 
 #### Link: https://test-reactjs-internship.vercel.app/
 #### Some image about webite
 ![image](https://user-images.githubusercontent.com/96834987/173490005-40e188bc-d805-417e-9f2d-322c03fb3a0c.png)
